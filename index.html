@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>花火</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="fireworks">
+        <div class="circle01">
+            <div class="particle_01"></div>
+            <div class="particle_02"></div>
+            <div class="particle_03"></div>
+            <div class="particle_04"></div>
+            <div class="particle_05"></div>
+            <div class="particle_06"></div>
+            <div class="particle_07"></div>
+            <div class="particle_08"></div>
+        </div>
+        <div class="circle02">
+            <div class="particle_01"></div>
+            <div class="particle_02"></div>
+            <div class="particle_03"></div>
+            <div class="particle_04"></div>
+            <div class="particle_05"></div>
+            <div class="particle_06"></div>
+            <div class="particle_07"></div>
+            <div class="particle_08"></div>
+        </div>
+        <div class="circle03">
+            <div class="particle_01"></div>
+            <div class="particle_02"></div>
+            <div class="particle_03"></div>
+            <div class="particle_04"></div>
+            <div class="particle_05"></div>
+            <div class="particle_06"></div>
+            <div class="particle_07"></div>
+            <div class="particle_08"></div>
+        </div>
+    </div>
+    <div class="people">
+        <div class="people_head"></div>
+        <div class="people_body"></div>
+        <div class="people_right_arm"></div>
+        <div class="people_left_arm"></div>
+        <div class="people_right_leg"></div>
+        <div class="people_left_leg"></div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $('.people').hover(
+            function(){
+                $('.fireworks').addClass('animation');
+                laze();
+            },
+            function(){
+                $('.fireworks').removeClass('animation');
+                $('.circle02').hide();
+                $('.circle03').hide();
+            }
+        );
+        function laze() {
+            $(function(){
+                setTimeout(function(){
+                    $('.circle02').show();
+                },1000);
+            });
+            $(function(){
+                setTimeout(function(){
+                    $('.circle03').show();
+                },2000);
+            });
+        }
+    </script>
+</body>
+</html>
